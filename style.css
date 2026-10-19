@@ -1,0 +1,83 @@
+:root {
+    --cor-fundo: #090014;
+    --cor-principal: #16002c;
+    --cor-secundaria: #2c0054;
+    --cor-destaque: #ff007f;
+    --cor-texto: #e2c0ff;
+    --cor-hover: #00f0ff;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid var(--cor-destaque);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.tela-inicial p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--cor-hover);
+    color: #000;
+    border-color: var(--cor-hover);
+    box-shadow: 0 0 15px var(--cor-hover);
+}
+
+.caixa-perguntas, .caixa-alternativas, .caixa-resultado {
+    display: none;
+}
+
+.caixa-perguntas.mostrar, .caixa-alternativas.mostrar, .caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-perguntas {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.caixa-alternativas button {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
